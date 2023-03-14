@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="./logic.js"></script>
+</head>
+<body>
+    <h1>Calculadora</h1>
+        <div>
+            <table class="calculadora">
+                <tr > <!--PANTALLA-->
+                    <input type="text" id="valor_numero" maxlength="20" value="0" readonly="true" class="pantalla">
+                </tr>
+                <tr class="fila"> <!--PRIMERA FILA-->
+                    <td><input type="Button" id="C" value="C" onclick="darC()" class="columna operaciones"></td>
+                    <td><input type="Button" id="dividir" value="/" onclick="operar(4)" class="columna operaciones"></td>
+                    <td><input type="Button" id="multiplicar" value="X" onclick="operar(3)" class="columna operaciones"></td>
+                    <td><input type="Button" id="borrar_ultima_cifra" value="CE" onclick="darCE()" class="columna operaciones"></td>
+                </tr>
+
+                <tr class="fila"> <!--SEGUNDA FILA-->
+                    <td><input type="Button" id="7" value="7" onclick="darNumero('7')" class="columna num"></td>
+                    <td><input type="Button" id="8" value="8" onclick="darNumero('8')" class="columna num"></td>
+                    <td><input type="Button" id="9" value="9" onclick="darNumero('9')" class="columna num"></td>
+                    <td><input type="Button" id="restar" value="-" onclick="operar(2)" class="columna operaciones"></td>
+                </tr>
+
+                <tr class="fila"> <!--TERCERA FILA-->
+                    <td><input type="Button" id="4" value="4" onclick="darNumero('4')" class="columna num"></td>
+                    <td><input type="Button" id="5" value="5" onclick="darNumero('5')" class="columna num"></td>
+                    <td><input type="Button" id="6" value="6" onclick="darNumero('6')" class="columna num"></td>
+                    <td><input type="Button" id="sumar" value="+" onclick="operar(1)" class="columna operaciones"></td>
+                </tr>
+
+                <tr class="fila"> <!--CUARTA FILA-->
+                    <td><input type="Button" id="1" value="1" onclick="darNumero('1')" class="columna num"></td>
+                    <td><input type="Button" id="2" value="2" onclick="darNumero('2')" class="columna num"></td>
+                    <td><input type="Button" id="3" value="3" onclick="darNumero('3')" class="columna num"></td>
+                    <td rowspan="2"><input type="Button" id="igual" value="=" onclick="esIgual()" class="columna operaciones igual"></td>
+                </td>
+                </tr>
+
+                <tr class="fila"> <!--QUINTA FILA-->
+                    <td><input type="Button" id="porcentaje" value="%" onclick="operar(5)" class="columna num"></td>
+                    <td><input type="Button" id="0" value="0" onclick="darNumero('0')" class="columna num"></td>
+                    <td><input type="Button" id="coma" value="," onclick="darComa()" class="columna num"></td>
+                </tr>
+
+            </table>
+        </div>
+</body>
+</html>
